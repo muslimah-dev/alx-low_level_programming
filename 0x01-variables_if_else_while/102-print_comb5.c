@@ -16,11 +16,11 @@ int main(void)
 		{
 			if (n < m)
 			{
-				putchar((m / 10) + 48);
-				putchar((m % 10) + 48);
 				putchar((n / 10) + 48);
 				putchar((n % 10) + 48);
 				putchar(' ');
+				putchar((m / 10) + 48);
+				putchar((m % 10) + 48);
 				if (n != 98 || m != 99)
 				{
 					putchar(',');
@@ -32,3 +32,4 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+
