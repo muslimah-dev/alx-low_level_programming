@@ -9,4 +9,5 @@ File 4: Write a function that prints a string, in reverse, followed by a new lin
 File 5:Write a function that reverses a string.
 File 6:Write a function that prints every other character of a string, starting with the first character, followed by a new line.
 
-File 7  :
+File : Write a function that prints half of a string, followed by a new line.
+File 8:   :
