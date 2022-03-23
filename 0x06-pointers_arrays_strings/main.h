@@ -1,5 +1,5 @@
-#ifndef MAIN_FILE
-#define MAIN_FILE
+#ifndef FILE_MAIN
+#define FILE_MAIN
 
 char *_strcat(char *dest, char *src);
 char *_strncpy(char *dest, char *src, int n);
