@@ -17,6 +17,8 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *last = *head;
 	unsigned int len = 0;
 
+	while (str[len] != '\0')
+		len++;
 	if (new_node == NULL)
 	{
 		return (NULL);
@@ -25,10 +27,6 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_node->len = len;
 	new_node->next = NULL;
 
-	while (str[len])
-	{
-		len++;
-	}
 	if (*head == NULL)
 	{
 		*head = new_node;
