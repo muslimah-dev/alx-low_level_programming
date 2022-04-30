@@ -16,15 +16,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (head == NULL)
 		return (0);
 	nw_nd = malloc(sizeof(listint_t));
-	if (nw_nd == NULL)
+	if (!nw_nd)
 		return (0);
 	nw_nd->next == NULL;
 	nw_nd->n == n;
 
 	if (idx == 0)
 	{
-		nw_nd->next == *head;
-		(*head) == nw_nd;
+		nw_nd->next = *head;
+		(*head) = nw_nd;
 		return (nw_nd);
 	}
 	fn = *head;
