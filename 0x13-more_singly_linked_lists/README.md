@@ -21,4 +21,6 @@ function that inserts a new node at a given position.
 TASK 10:
 function that deletes the node at index index of a listint_t linked list
 TASK 11:
+function that reverses a listint_t linked list.
+TASK 12:
 
