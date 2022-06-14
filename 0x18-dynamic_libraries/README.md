@@ -1,9 +1,9 @@
 **C- Dynamic Libraries.**
-###Project's Description.
+**Project's Description.**
 This is a project that make use of dynamic library context to provide or use codes that can be loaded anywhere in memory.
 
-#Tasks.
--[] 1. Create the dynamic library libdynamic.so containing all the functions listed below:
+**Tasks**
+**1** Create the dynamic library libdynamic.so containing all the functions listed below:
 
 int _putchar(char c);
 int _islower(int c);
@@ -25,5 +25,4 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
-
--[] 2. Create a script that creates a dynamic library called liball.so from all the .c files that are in the current directory
+**2** Create a script that creates a dynamic library called liball.so from all the .c files that are in the current directory
