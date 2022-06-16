@@ -28,11 +28,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (-1);
 	}
 
-	nxt = pre->nxt;
+	nxt = pre->next;
 
 	if (index != 0)
 	{
-		pre->nxt = nxt->next;
+		pre->next = nxt->next;
 		free(nxt);
 	}
 	else
