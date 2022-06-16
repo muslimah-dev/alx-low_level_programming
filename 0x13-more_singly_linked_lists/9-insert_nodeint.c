@@ -1,46 +1,51 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - function that inserts a new node
+ * insert_nodeint_at_index - inserts a new node
  * at a given position.
- * @head: first member of the linked list.
- * @idx: index where node is added.
- * @n: new node.
- * Return: it reurns n.
+ * @head: head of a list.
+ * @idx: index of the list where the new node is
+ * added.
+ * @n: integer element.
+ *
+ * Return: the address of the new node, or NULL if it
+ * failed.
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *fn;
-	listint_t *nw_nd;
+	unsigned int i;
+	listint_t *new;
+	listint_t *h;
 
-	if (head == NULL)
-		return (0);
-	nw_nd = malloc(sizeof(listint_t));
-	if (!nw_nd)
-		return (0);
-	nw_nd->next == NULL;
-	nw_nd->n == n;
+	h = *head;
+
+	if (idx != 0)
+	{
+		for (i = 0; i < idx - 1 && h != NULL; i++)
+		{
+			h = h->next;
+		}
+	}
+
+	if (h == NULL && idx != 0)
+		return (NULL);
+
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
 
 	if (idx == 0)
 	{
-		nw_nd->next = *head;
-		(*head) = nw_nd;
-		return (nw_nd);
+		new->next = *head;
+		*head = new;
 	}
-	fn = *head;
-
-	while (idx != 1)
+	else
 	{
-		fn = fn->next;
-		--idx;
-		if (fn == NULL)
-		{
-			free(nw_nd);
-			return (NULL);
-		}
+		new->next = h->next;
+		h->next = new;
 	}
-	nw_nd->next = fn->next;
-	fn->next = nw_nd;
 
-	return (nw_nd);
+	return (new);
 }
